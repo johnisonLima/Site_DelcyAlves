@@ -25,6 +25,9 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">  
     <link rel="icon" sizes="192x192" href="img/favicon/android-icon-192x192.png">    
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
    
     <!-- Configurações Cores -->
     <link rel="stylesheet" href="css/cores.css">
@@ -37,10 +40,73 @@
     <link rel="stylesheet" href="css/style-landscape.css" media="screen and (min-width: 768.98px)">
     <link rel="stylesheet" href="css/style-tablets.css" media="screen and (min-width: 991.98px)">
     <link rel="stylesheet" href="css/style-desktop.css" media="screen and (min-width: 1199.98px)">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- owlcarousel  -->
+    <link rel="stylesheet" href="css/owlcarousel/docs.theme.min.css">
+    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
     
     <title>DelAlves</title>
 </head>
 <body>
-    <h1>Site em construção</h1>
+    <div class="container">
+        <header>
+            <nav>
+                <span><img src="img/logo.png" alt="Del Alves Imóveis"></span>
+                <span class="material-icons">menu</span>
+                <ul class="menu">
+                    <li><a href="#">link1</a></li>                
+                    <li><a href="#">link2</a></li>                
+                    <li><a href="#">link3</a></li>
+                    <li><a href="#">link4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="banner-principal" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="carousel/x-small/header_background_1.jpg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="carousel/x-small/header_background_2.jpg" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="carousel/x-small/header_background_3.jpg" alt="...">
+                    </div>
+                </div>
+            <article id="imoveis">
+                <h1>Imóveis para Venda</h1>
+                <section>
+                    <div id="card">Card</div>
+                </section>
+                <section>
+                    <div id="card">Card</div>
+                </section>
+                <section>
+                    <div id="card">Card</div>
+                </section>
+                <section>
+                    <div id="card">Card</div>
+                </section>
+                <section>
+                    <div id="card">Card</div>
+                </section>
+            </article>
+            <article id="categorias">
+                <h1>Categorias</h1>
+                <section>categoria 1</section>
+                <section>categoria 2</section>
+            </article>
+        </main>
+        <footer>Footer</footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+    <script src="js/owlcarousel/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
