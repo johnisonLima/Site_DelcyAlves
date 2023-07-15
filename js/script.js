@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function(){  
     // --------------------------------------------------------
     //  pegar cada imagem conforme a sua resolução
     // -------------------------------------------------------- 
@@ -26,3 +26,17 @@ window.onload = function(){
         }   
     }    
 }
+
+    // --------------------------------------------------------
+    //  Colocar menu para aparecer telas pequenas
+    // -------------------------------------------------------- 
+    function collaping(){
+        let menu = document.querySelector('.nav_collapse')
+
+        if(menu.style.display == 'block'){
+            menu.style.display = 'none'
+        }
+        else{
+            menu.style.display = 'block'
+        }      
+    }  
