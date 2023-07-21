@@ -1,6 +1,6 @@
 window.onload = function(){  
     // --------------------------------------------------------
-    //  pegar cada imagem conforme a sua resolução
+    //  Pegar cada imagem conforme a sua resolução
     // -------------------------------------------------------- 
     let imagem = document.getElementsByClassName("carousel-item");
 
@@ -24,19 +24,50 @@ window.onload = function(){
         for(let i=0; i<imagem.length; i++){            
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
-    }    
-}
-
+    }
+    
     // --------------------------------------------------------
-    //  Colocar menu para aparecer telas pequenas
+    //  Mudar header ao descer a página
     // -------------------------------------------------------- 
-    function collaping(){
-        let menu = document.querySelector('.nav_collapse')
+    // $(window).scroll(function(){
+    window.addEventListener('scroll', () => {
+        "use strict"
 
-        if(menu.style.display == 'block'){
-            menu.style.display = 'none'
+        let scroll = $(window).scrollTop()
+        let navbar = document.querySelector('nav')
+
+        if(scroll > 60){
+            navbar.classList.add('scroll-fixed-navbar')
         }
         else{
-            menu.style.display = 'block'
-        }      
-    }  
+            navbar.classList.remove('scroll-fixed-navbar')
+        }
+    })
+}
+
+// --------------------------------------------------------
+//  Colocar menu para aparecer telas pequenas
+// -------------------------------------------------------- 
+function toggleMenu(){
+    const menu = document.querySelector('.nav_collapse')
+    const alturaMenu = menu.scrollHeight
+    let navbar = document.querySelector('nav')
+
+    // if(menu.style.display == 'block'){
+    //     menu.style.display = 'none'
+    //     navbar.classList.remove('scroll-fixed-navbar')
+    // }
+    // else{
+    //     menu.style.display = 'block'
+    //     navbar.classList.add('scroll-fixed-navbar')
+    // }    
+    
+    if(menu.clientHeight > 0){
+        menu.style.height = "0"
+        navbar.classList.remove('scroll-fixed-navbar')
+    } 
+    else{
+        menu.style.height = alturaMenu + "px"
+        navbar.classList.add('scroll-fixed-navbar')
+    }
+}  
