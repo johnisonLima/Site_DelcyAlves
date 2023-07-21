@@ -15,7 +15,7 @@ window.onload = function(){
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/xSmall/header_background_${i+1}.jpg`
         }   
     }
-    if(screen.width > medium && screen.width < large){
+    if(screen.width > small && screen.width < large){
         for(let i=0; i<imagem.length; i++){            
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/medium/header_background_${i+1}.jpg`
         }   
@@ -27,47 +27,42 @@ window.onload = function(){
     }
     
     // --------------------------------------------------------
-    //  Mudar header ao descer a página
+    //  Mudar a cor do header ao descer a página
     // -------------------------------------------------------- 
-    // $(window).scroll(function(){
     window.addEventListener('scroll', () => {
         "use strict"
 
-        let scroll = $(window).scrollTop()
-        let navbar = document.querySelector('nav')
+        const scroll = window.scrollY
+        const nav = document.querySelector('nav')
+        const alturaNav = nav.scrollHeight
+        
+        const menu = document.querySelector('.nav_collapse')
+        const alturaMenu = menu.scrollHeight
 
-        if(scroll > 60){
-            navbar.classList.add('scroll-fixed-navbar')
+        if(scroll > alturaNav){
+            nav.classList.add('scroll-fixed-navbar')
         }
         else{
-            navbar.classList.remove('scroll-fixed-navbar')
+            nav.classList.remove('scroll-fixed-navbar')
+            menu.style.height = "0"
         }
-    })
+    })    
 }
 
-// --------------------------------------------------------
-//  Colocar menu para aparecer telas pequenas
-// -------------------------------------------------------- 
-function toggleMenu(){
-    const menu = document.querySelector('.nav_collapse')
-    const alturaMenu = menu.scrollHeight
-    let navbar = document.querySelector('nav')
-
-    // if(menu.style.display == 'block'){
-    //     menu.style.display = 'none'
-    //     navbar.classList.remove('scroll-fixed-navbar')
-    // }
-    // else{
-    //     menu.style.display = 'block'
-    //     navbar.classList.add('scroll-fixed-navbar')
-    // }    
-    
-    if(menu.clientHeight > 0){
-        menu.style.height = "0"
-        navbar.classList.remove('scroll-fixed-navbar')
-    } 
-    else{
-        menu.style.height = alturaMenu + "px"
-        navbar.classList.add('scroll-fixed-navbar')
-    }
-}  
+    // --------------------------------------------------------
+    //  Colocar menu para aparecer telas pequenas
+    // -------------------------------------------------------- 
+    function toggleMenu(){
+        const menu = document.querySelector('.nav_collapse')
+        const alturaMenu = menu.scrollHeight
+        const nav = document.querySelector('nav')
+        
+        if(menu.clientHeight > 0){
+            menu.style.height = "0"
+            nav.classList.remove('scroll-fixed-navbar')
+        } 
+        else{
+            menu.style.height = alturaMenu + "px"
+            nav.classList.add('scroll-fixed-navbar')
+        }
+    }  
