@@ -28,7 +28,7 @@ ul{
     grid-template-columns: 1fr;
     grid-template-areas:
         'header'
-        'banner'
+        'slideshow'
         'main'
         'footer'
     ;    
@@ -112,9 +112,31 @@ header .nav_collapse{
 }
 
 /*****************************************************************************
+******************************** SLIDER SHOW *********************************
+******************************************************************************/
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.carousel-track {
+    display: flex;
+    transition: transform 1s ease; /* Velocidade e suavidade do deslizamento */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Assegura que cada slide ocupe 100% do contêiner */
+}
+  
+.carousel-container .carousel-slide.active {
+    transform: translate(0)
+}
+
+/*****************************************************************************
 ********************************** BANNER ************************************
 ******************************************************************************/
-#banner-principal{
+/* #banner-principal{
     grid-area: banner;
     background-color: var(--c_azul_claro);
 }
@@ -124,7 +146,7 @@ header .nav_collapse{
     height: 370px;
     min-height: 260px;
     min-width: 100%;
-}
+} */
 
 /*****************************************************************************
 ************************************ MAIN ************************************
