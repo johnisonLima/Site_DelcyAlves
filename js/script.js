@@ -24,45 +24,42 @@ window.onload = function(){
         for(let i=0; i<imagem.length; i++){            
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
-    }
-    
-    // --------------------------------------------------------
-    //  Mudar a cor do header ao descer a página
-    // -------------------------------------------------------- 
-    window.addEventListener('scroll', () => {
-        "use strict"
-
-        const scroll = window.scrollY
-        const nav = document.querySelector('nav')
-        const alturaNav = nav.scrollHeight
-        
-        const menu = document.querySelector('.nav_collapse')
-        const alturaMenu = menu.scrollHeight
-
-        if(scroll > alturaNav){
-            nav.classList.add('scroll-fixed-navbar')
-        }
-        else{
-            nav.classList.remove('scroll-fixed-navbar')
-            menu.style.height = "0"
-        }
-    })    
+    }       
 }
+// --------------------------------------------------------
+//  Mudar a cor do header ao descer a página
+// -------------------------------------------------------- 
+window.addEventListener('scroll', () => {
+    "use strict"
 
-    // --------------------------------------------------------
-    //  Colocar menu para aparecer telas pequenas
-    // -------------------------------------------------------- 
-    function toggleMenu(){
-        const menu = document.querySelector('.nav_collapse')
-        const alturaMenu = menu.scrollHeight
-        const nav = document.querySelector('nav')
-        
-        if(menu.clientHeight > 0){
-            menu.style.height = "0"
-            nav.classList.remove('scroll-fixed-navbar')
-        } 
-        else{
-            menu.style.height = alturaMenu + "px"
-            nav.classList.add('scroll-fixed-navbar')
-        }
-    }  
+    const scroll = window.scrollY
+    const nav = document.querySelector('nav')
+    const alturaNav = nav.scrollHeight
+    
+    const menu = document.querySelector('.nav_collapse')
+
+    if(scroll > alturaNav){
+        nav.classList.add('scroll-fixed-navbar')
+    }
+    else{
+        nav.classList.remove('scroll-fixed-navbar')
+        menu.style.height = "0"
+    }
+})    
+
+// --------------------------------------------------------
+//  Colocar menu para aparecer telas pequenas
+// -------------------------------------------------------- 
+function toggleMenu(){
+    const menu = document.querySelector('.nav_collapse')
+    const alturaMenu = menu.scrollHeight
+    const nav = document.querySelector('nav')
+    
+    if(menu.clientHeight > 0){
+        menu.style.height = "0"
+    } 
+    else{
+        menu.style.height = alturaMenu + "px"
+        nav.classList.add('scroll-fixed-navbar')
+    }
+}  

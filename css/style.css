@@ -2,6 +2,7 @@
 ******************************* IMPORTAÇÕES *********************************
 ******************************************************************************/
 @import url('cores.css');
+@import url('fontes.css');
 
 /*****************************************************************************
 **************************** CONFIGURAÇÕES GERIAS *****************************
@@ -14,12 +15,13 @@
 
     color: #fff;
 }
-a{
-    text-decoration: none;
+body{
+    font-family: 'Cardo', serif;
 }
-ul{
-    margin: 0 !important;
-}
+a{  text-decoration: none;}
+ul{ margin: 0 !important;}
+h1{ margin: 0 !important;}
+
 /*****************************************************************************
 ********************************** CONTAINER *********************************
 ******************************************************************************/
@@ -117,6 +119,7 @@ header .nav_collapse{
 #banner-principal{
     grid-area: banner;
     background-color: var(--c_azul_claro);
+    box-shadow: inset 0 0 20px rgb(0, 0, 0);
 }
 
 #banner-principal img{
@@ -131,7 +134,19 @@ header .nav_collapse{
 ******************************************************************************/
 main{
     grid-area: main;
-    background-color: var(--c_verde_claro);
+    background-color: var(--c_banco_claro);
+}
+
+main #imoveis{
+    padding: 10px;
+}
+
+main #imoveis > h1{
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    font-size: 25px;
+    color: var(--c_cinza_medio);
+    margin-block: 20px;
 }
 
 /*****************************************************************************
@@ -139,6 +154,7 @@ main{
 ******************************************************************************/
 footer{
     grid-area: footer;
-    background-color: var(--c_azul_medio);
+    background-color: var(--c_cinza_escuro);
+    color: var(--c_cinza_medio);
     padding: 80px 0;
 }
