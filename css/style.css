@@ -80,7 +80,7 @@ header nav .nav_collapse{
     height: 0;
     background-color: var(--c_azul_medio);
     overflow: hidden;
-    transition: height .7s ease-in;
+    transition: height .3s ease-in;
 }
 
 header nav .menu{
