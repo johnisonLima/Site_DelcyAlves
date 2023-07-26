@@ -24,7 +24,7 @@ window.onload = function(){
         for(let i=0; i<imagem.length; i++){            
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
-    }       
+    }
 }
 // --------------------------------------------------------
 //  Mudar a cor do header ao descer a página
