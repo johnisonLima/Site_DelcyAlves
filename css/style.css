@@ -224,13 +224,13 @@ main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li i{
 main #imoveis .wrap_imovel .card_imovel .card_imovel_footer .local_imovel{
     font-family: var(--fonte_tercearia);
     font-size: 16px;
-    color: var(--c_cinza_claro);
+    color: var(--c_cinza_medio);
     transition: color .40s ease-in-out;
 }
 
 main #imoveis .wrap_imovel .card_imovel:hover .local_imovel,
 main #imoveis .wrap_imovel .card_imovel:focus .local_imovel{
-    color: var(--c_cinza_medio);
+    color: var(--c_cinza_claro);
 }
 
 
