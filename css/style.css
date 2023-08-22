@@ -133,7 +133,7 @@ header .nav_collapse{
 ******************************************************************************/
 main{
     grid-area: main;
-    background-color: var(--c_banco_claro);
+    background-color: var(--c_branco_claro);
 }
 
 main #imoveis{
@@ -187,7 +187,51 @@ main #imoveis .wrap_imovel .card_imovel .card_imovel_body .capa_imovel{
     transition: transform .35s ease;
 }
 
-main #imoveis .wrap_imovel .card_imovel .card_imovel_body .tipo_imovel{}
+main #imoveis .wrap_imovel .card_imovel .card_imovel_body .tipo_imovel{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: var(--fonte_tercearia);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--c_branco_claro);
+    text-shadow: 1px 1px 1px #00000069;
+    z-index: 1;
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer{
+    padding: 10px;
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+main #imoveis .wrap_imovel .card_imovel:hover .capa_imovel,
+main #imoveis .wrap_imovel .card_imovel:focus .capa_imovel{
+    transform: scale(1.1);
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li span,
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li i{
+    font-weight: bold;
+    color: var(--c_cinza_medio);
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer .local_imovel{
+    font-family: var(--fonte_tercearia);
+    font-size: 16px;
+    color: var(--c_cinza_claro);
+    transition: color .40s ease-in-out;
+}
+
+main #imoveis .wrap_imovel .card_imovel:hover .local_imovel,
+main #imoveis .wrap_imovel .card_imovel:focus .local_imovel{
+    color: var(--c_cinza_medio);
+}
 
 
 /*****************************************************************************
