@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-
     color: #fff;
 }
 body{
@@ -20,7 +19,7 @@ body{
 }
 a{  text-decoration: none;}
 ul{ margin: 0 !important;}
-h1{ margin: 0 !important;}
+h1, h2, h3{ margin: 0 !important;}
 
 /*****************************************************************************
 ********************************** CONTAINER *********************************
@@ -148,6 +147,46 @@ main #imoveis > h1{
     color: var(--c_cinza_medio);
     margin-block: 20px;
 }
+
+/*****************************************************************************
+*********************************** IMOVEIS ***********************************
+******************************************************************************/
+main #imoveis .wrap_imovel .card_imovel{
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(30,41,61,.2), 0 1px 3px 0 rgba(30,41,61,.2);
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_body{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_body .capa_imovel{
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: transform .35s ease;
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_body .capa_imovel::before{
+    content: '';
+    display: block;
+    padding-bottom: 60%;
+    position: absolute;
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_body .capa_imovel::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(180deg,transparent,rgba(12,31,69,.5));
+}
+
 
 /*****************************************************************************
 ************************************ FOOTER **********************************
