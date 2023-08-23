@@ -25,6 +25,32 @@ window.onload = function(){
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
     }
+
+    // --------------------------------------------------------
+    //  CAROUSEL IMÓVEIS 
+    // -------------------------------------------------------- 
+    let carouselImoveis = $('#carousel_imoveis')
+
+    carouselImoveis.owlCarousel({
+        margin: 10,
+        nav: true,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        responsiveClass:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+    
 }
 // --------------------------------------------------------
 //  Mudar a cor do header ao descer a página
