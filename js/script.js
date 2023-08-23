@@ -8,7 +8,7 @@ window.onload = function(){
         small   = 767,
         medium  = 997,
         large   = 1199,
-        xLarge  = 1399;
+        xLarge  = 1399;        
 
     if(screen.width < medium){
         for(let i=0; i<imagem.length; i++){            
@@ -29,27 +29,7 @@ window.onload = function(){
     // --------------------------------------------------------
     //  CAROUSEL IMÓVEIS 
     // -------------------------------------------------------- 
-    let carouselImoveis = $('#carousel_imoveis')
-
-    carouselImoveis.owlCarousel({
-        margin: 10,
-        nav: true,
-        loop: true,
-        dots: false,
-        autoplay: false,
-        responsiveClass:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
-    })
+    var carouselImoveis = $('#carousel_imoveis')
     
 }
 // --------------------------------------------------------
