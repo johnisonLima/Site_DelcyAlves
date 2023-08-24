@@ -8,7 +8,7 @@ window.onload = function(){
         small   = 767,
         medium  = 997,
         large   = 1199,
-        xLarge  = 1399;        
+        xLarge  = 1399;
 
     if(screen.width < medium){
         for(let i=0; i<imagem.length; i++){            
@@ -25,12 +25,6 @@ window.onload = function(){
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
     }
-
-    // --------------------------------------------------------
-    //  CAROUSEL IMÓVEIS 
-    // -------------------------------------------------------- 
-    var carouselImoveis = $('#carousel_imoveis')
-    
 }
 // --------------------------------------------------------
 //  Mudar a cor do header ao descer a página
