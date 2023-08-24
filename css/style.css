@@ -14,8 +14,12 @@
     list-style: none;
     color: #fff;
 }
+html{
+    width: 100%;
+}
 body{
     font-family: 'Cardo', serif;
+    width: 100%;
 }
 a{  text-decoration: none;}
 ul{ margin: 0;}
@@ -125,8 +129,8 @@ header .nav_collapse{
 #banner-principal img{
     object-fit: cover;
     height: 370px;
+    width: 100%;
     min-height: 260px;
-    min-width: 100%;
 }
 
 /*****************************************************************************
@@ -152,6 +156,10 @@ main #imoveis > h1{
 /*****************************************************************************
 *********************************** IMOVEIS ***********************************
 ******************************************************************************/
+main #imoveis .wrap_imovel{
+    padding: 10px;
+}
+
 main #imoveis .wrap_imovel .card_imovel{
     display: block;
     width: 100%;

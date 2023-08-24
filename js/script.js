@@ -2,7 +2,7 @@ window.onload = function(){
     // --------------------------------------------------------
     //  Pegar cada imagem conforme a sua resolução
     // -------------------------------------------------------- 
-    let imagem = document.getElementsByClassName("carousel-item");
+    let imagem = document.getElementsByClassName("banner_item");
 
     let xSmall  = 575,
         small   = 767,
@@ -25,6 +25,13 @@ window.onload = function(){
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
     }
+
+    // --------------------------------------------------------
+    //  CAROUSEL IMÓVEIS 
+    // -------------------------------------------------------- 
+    let carouselImoveis = $('#carousel_imoveis')
+    
+    
 }
 // --------------------------------------------------------
 //  Mudar a cor do header ao descer a página
