@@ -252,3 +252,29 @@ footer{
     color: var(--c_cinza_medio);
     padding: 80px 0;
 }
+
+.to_top{
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    right: 30px;
+    bottom: 60px;    
+    color: var(--c_branco_claro);
+    text-align: center;
+    background-color: var(--c_laranja_claro);
+    cursor: pointer;
+    position: fixed;
+    box-shadow: 0 1px 2px 0 #00000069;
+    z-index: 10;
+    transition-duration: 500ms;
+}
+
+.to_top:hover{
+    background-color: var(--c_laranja_medio);
+}
+
+.to_top span{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+}

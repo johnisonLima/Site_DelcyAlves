@@ -24,14 +24,7 @@ window.onload = function(){
         for(let i=0; i<imagem.length; i++){            
                 imagem[i].lastElementChild.attributes.src.nodeValue = `carousel/large/header_background_${i+1}.jpg`
         }   
-    }
-
-    // --------------------------------------------------------
-    //  CAROUSEL IMÓVEIS 
-    // -------------------------------------------------------- 
-    let carouselImoveis = $('#carousel_imoveis')
-    
-    
+    }        
 }
 // --------------------------------------------------------
 //  Mudar a cor do header ao descer a página
@@ -69,4 +62,28 @@ function toggleMenu(){
         menu.style.height = alturaMenu + "px"
         nav.classList.add('scroll-fixed-navbar')
     }
-}  
+} 
+
+// --------------------------------------------------------
+//  rolar página para cima
+// -------------------------------------------------------- 
+let offset = 250;
+let duracao = 500;
+
+// fazer icone desaparecer
+$(window).scroll(function(){
+    if($(this).scrollTop() > offset){
+        $('.to_top').fadeIn(duracao);           
+    }
+    else{
+        $('.to_top').fadeOut(duracao);              
+    }
+})
+
+$('.to_top').click(function() {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 600)
+
+    return false
+})
