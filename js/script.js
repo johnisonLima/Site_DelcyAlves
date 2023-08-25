@@ -70,7 +70,7 @@ function toggleMenu(){
 let offset = 250;
 let duracao = 500;
 
-// fazer icone desaparecer
+// Fazer icone desaparecer
 $(window).scroll(function(){
     if($(this).scrollTop() > offset){
         $('.to_top').fadeIn(duracao);           
@@ -81,7 +81,7 @@ $(window).scroll(function(){
 })
 
 $('.to_top').click(function() {
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: 0
     }, 600)
 
