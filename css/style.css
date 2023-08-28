@@ -226,8 +226,11 @@ main #imoveis .wrap_imovel .card_imovel:focus .capa_imovel{
 
 main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li span,
 main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li i{
-    font-weight: bold;
     color: var(--c_cinza_medio);
+}
+
+main #imoveis .wrap_imovel .card_imovel .card_imovel_footer li span{
+    font-weight: bold;
 }
 
 main #imoveis .wrap_imovel .card_imovel .card_imovel_footer .local_imovel{
@@ -250,9 +253,23 @@ footer{
     grid-area: footer;
     background-color: var(--c_cinza_escuro);
     color: var(--c_cinza_medio);
-    padding: 80px 0;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+footer p,
+footer i,
+footer a{
+    color: var(--c_cinza_claro);
+    font-family: var(--fonte_tercearia);
+    font-size: 12px;
+}
+
+/*****************************************************************************
+************************************ TO TOP **********************************
+******************************************************************************/
 .to_top{
     width: 40px;
     height: 40px;
