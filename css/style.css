@@ -390,6 +390,38 @@ footer a{
     color: var(--c_cinza_claro);
 }
 
+.container_imovel .descricao_imovel .perfil_corretor{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.container_imovel .descricao_imovel .perfil_corretor .corretor_imagem{
+    max-width: 120px;
+}
+
+.container_imovel .descricao_imovel .perfil_corretor .corretor_descricao > p{
+    color: var(--c_cinza_medio);
+}
+
+.container_imovel .descricao_imovel .perfil_corretor .corretor_descricao .corretor_nome{
+    font-size: 19px;
+    font-weight: 700;
+    margin-block: 15px;
+    padding-block: 10px;
+    border-block: 1px solid var(--c_cinza_claro);
+}
+
+.container_imovel .descricao_imovel .perfil_corretor .corretor_descricao .corretor_creci{
+    font-size: 19px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.container_imovel .perfil_corretor .corretor_descricao .corretor_perfil_contato i{    
+    color: var(--c_cinza_medio);
+}
+
 /*****************************************************************************
 ************************************ TO TOP **********************************
 ******************************************************************************/
