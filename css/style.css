@@ -21,7 +21,7 @@ body{
     font-family: 'Cardo', serif;
     width: 100%;
 }
-a{  text-decoration: none;}
+a{  text-decoration: none; color: inherit;}
 ul{ margin: 0; padding: 0;}
 h1, h2, h3{ margin: 0;}
 img{max-width: 100%;}
@@ -291,6 +291,20 @@ footer a{
 
 .container_imovel .voltar_pagina{
     padding-block: 15px;
+    font-family: var(--fonte_tercearia);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.container_imovel .voltar_pagina a,
+.container_imovel .voltar_pagina a i{
+    color: var(--c_cinza_claro);
+    margin-right: 2px;
+}
+
+.container_imovel .voltar_pagina:hover a,
+.container_imovel .voltar_pagina:hover i{
+    color: var(--c_cinza_medio);
 }
 
 .container_imovel .descricao_imovel{
@@ -364,17 +378,13 @@ footer a{
 
 .container_imovel .descricao_imovel .perfil_imovel .imovel_mais_detalhes{
     display: none;
-    height: 0;  
-    overflow: hidden;
-    transition: height .3s ease-in;
-    transition: display .1 ease;
-
     padding-bottom: 15px; 
     margin-bottom: 15px;
     border-bottom: 1px solid var(--c_cinza_claro);
 }
 
 .container_imovel .descricao_imovel .perfil_imovel .imovel_mais_detalhes li{
+    margin-block: 4px;
     color: var(--c_cinza_medio);
     text-align: justify;
 }
@@ -385,12 +395,6 @@ footer a{
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid var(--c_cinza_claro);
-}
-
-.container_imovel .descricao_imovel .perfil_imovel .imovel_tipo{   
-    /* padding-top: 15px; 
-    margin-top: 15px;
-    border-top: 1px solid var(--c_cinza_claro); */
 }
 
 .container_imovel .descricao_imovel .perfil_imovel .imovel_tipo h1{
@@ -512,3 +516,4 @@ footer a{
     line-height: 40px;
     font-weight: bold;
 }
+

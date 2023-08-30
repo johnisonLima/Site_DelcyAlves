@@ -91,24 +91,37 @@ $('.to_top').click(function() {
 // --------------------------------------------------------
 //  Colocar mais detalhes para aparecer
 // -------------------------------------------------------- 
-function toggleMaisDetalhes(){
-    const div = document.querySelector('.imovel_mais_detalhes')
-    const altura = div.scrollHeight
+$('#toggleMaisDetalhes').click(function(){
+    $('.imovel_mais_detalhes').toggle(500)
+})
 
-    var estiloComputado = window.getComputedStyle(div);
-    var display = estiloComputado.getPropertyValue("display");
+// --------------------------------------------------------
+//  Galeria
+// -------------------------------------------------------- 
+// $('.galeria_imovel').magnificPopup({
+//     delegate: 'a', 
+//     type: 'image',
+//     gallery: {
+//         enabled: true,
+//         navigateByImgClick: true,
+//         preload: [0,2],
+//         tPrev: 'Voltar (Seta para esquerda)',
+//         tNext: 'Próximo (Seta para direita)', 
+//         tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
+//     }
+// })
 
-    console.log(display)
-    console.log(altura)
-    
-    if(display == 'none'){
-        div.style.height = "0"
-        div.style.display = 'block'
-        // div.style.height = altura + "px"
-        
-    } 
-    else{
-        div.style.display = 'none'
-        div.style.height = altura + "px"       
-    }
-} 
+$('.galeria_imovel').each(function() {
+    $(this).magnificPopup({
+        delegate: 'a', 
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,2],
+            tPrev: 'Voltar (Seta para esquerda)',
+            tNext: 'Próximo (Seta para direita)', 
+            tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
+        }
+    })
+})
