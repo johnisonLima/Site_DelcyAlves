@@ -2,7 +2,7 @@ window.onload = function(){
     // --------------------------------------------------------
     //  Pegar cada imagem conforme a sua resolução
     // -------------------------------------------------------- 
-    let imagem = document.getElementsByClassName("banner_item");
+    let imagem = document.getElementsByClassName("banner_item")
 
     let xSmall  = 575,
         small   = 767,
@@ -87,3 +87,28 @@ $('.to_top').click(function() {
 
     return false
 })
+
+// --------------------------------------------------------
+//  Colocar mais detalhes para aparecer
+// -------------------------------------------------------- 
+function toggleMaisDetalhes(){
+    const div = document.querySelector('.imovel_mais_detalhes')
+    const altura = div.scrollHeight
+
+    var estiloComputado = window.getComputedStyle(div);
+    var display = estiloComputado.getPropertyValue("display");
+
+    console.log(display)
+    console.log(altura)
+    
+    if(display == 'none'){
+        div.style.height = "0"
+        div.style.display = 'block'
+        // div.style.height = altura + "px"
+        
+    } 
+    else{
+        div.style.display = 'none'
+        div.style.height = altura + "px"       
+    }
+} 
