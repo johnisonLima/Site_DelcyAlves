@@ -431,9 +431,19 @@ footer a{
 }
 
 .container_imovel .perfil_corretor .corretor_descricao .corretor_perfil_contato i,
-.container_imovel .perfil_corretor .corretor_descricao .corretor_perfil_contato a{    
+.container_imovel .perfil_corretor .corretor_descricao .corretor_perfil_contato a,
+.container_imovel .perfil_corretor .corretor_perfil_contato .corretor_contato{    
     color: var(--c_cinza_medio);
 }
+
+.container_imovel .perfil_corretor .corretor_perfil_contato .corretor_contato{ 
+    font-family: var(--fonte_tercearia);
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    margin-block: 5px 15px;
+}
+
 
 .container_imovel .perfil_corretor .corretor_descricao .corretor_perfil_contato i img{
     width: 16px;
