@@ -299,7 +299,7 @@ footer a{
 }
 
 .container_imovel .descricao_imovel div{
-    color: var(--c_cinza_escuro);
+    color: var(--c_cinza_medio);
 }
 
 .container_imovel .descricao_imovel .imovel_itens{
@@ -332,17 +332,22 @@ footer a{
 
 .container_imovel .descricao_imovel .imovel_itens .itens_icones .icone_descricao,
 .container_imovel .descricao_imovel .imovel_itens .itens_icones i{
-    color: var(--c_cinza_escuro);
+    color: var(--c_cinza_medio);
 }
 
 .container_imovel .descricao_imovel .perfil_imovel .imovel_itens .itens_galeria{
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+}
+
+.container_imovel .descricao_imovel .perfil_imovel .itens_galeria_content:hover span{
+    color: var(--c_cinza_claro);
 }
 
 .container_imovel .imovel_itens .itens_galeria .itens_galeria_content span,
 .container_imovel .imovel_itens .itens_galeria .itens_galeria_content i{
-    color: var(--c_cinza_escuro);
+    color: var(--c_cinza_medio);
 }
 
 .container_imovel .imovel_itens .itens_galeria .itens_galeria_content:first-child::after{
