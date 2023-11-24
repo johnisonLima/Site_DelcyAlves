@@ -97,31 +97,42 @@ $('#toggleMaisDetalhes').click(function(){
 
 // --------------------------------------------------------
 //  Galeria
-// -------------------------------------------------------- 
-// $('.galeria_imovel').magnificPopup({
-//     delegate: 'a', 
-//     type: 'image',
-//     gallery: {
-//         enabled: true,
-//         navigateByImgClick: true,
-//         preload: [0,2],
-//         tPrev: 'Voltar (Seta para esquerda)',
-//         tNext: 'Próximo (Seta para direita)', 
-//         tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
-//     }
+// --------------------------------------------------------
+// $('.galeria_imovel').each(function() {
+//     $(this).magnificPopup({
+//         delegate: 'a', 
+//         type: 'image',
+//         gallery: {
+//             enabled: true,
+//             navigateByImgClick: true,
+//             preload: [0,2],
+//             tPrev: 'Voltar (Seta para esquerda)',
+//             tNext: 'Próximo (Seta para direita)', 
+//             tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
+//         }
+//     })
 // })
 
-$('.galeria_imovel').each(function() {
-    $(this).magnificPopup({
-        delegate: 'a', 
-        type: 'image',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0,2],
-            tPrev: 'Voltar (Seta para esquerda)',
-            tNext: 'Próximo (Seta para direita)', 
-            tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
-        }
-    })
-})
+var photoSwipe = new PhotoSwipe({
+    // The element that will be used to display the images.
+    container: document.querySelector('#galeria_imovel'),
+  
+    // The images that will be displayed.
+    items: [
+      {
+        // The URL of the image.
+        url: '../../imoveis/1.jpg',
+  
+        // The title of the image.
+        title: 'Image 1'
+      },
+      {
+        url: '../imoveis/1.jpg',
+        title: 'Image 2'
+      },
+      {
+        url: '../imoveis/1.jpg',
+        title: 'Image 3'
+      }
+    ]
+  });

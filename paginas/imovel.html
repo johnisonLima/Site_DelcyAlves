@@ -81,12 +81,21 @@
                         <i class="fa fa-caret-left" aria-hidden="true"></i> Voltar
                     </a>
                 </div>
-                <div class="galeria_imovel">
+                <!-- <div class="galeria_imovel">
                     <a href="../imoveis/1.jpg">
                         <img src="../imoveis/1.jpg" alt="casa em consominio">
                     </a>
                     <a href="../imoveis/2.jpg"></a>
                     <a href="../imoveis/3.jpg"></a>
+                </div> -->
+                <div id="galeria_imovel" class="galeria_imovel">
+                    <a href="../imoveis/1.jpg" data-pswp-src="../imoveis/1.jpg" data-pswp-caption="Image 1">
+                        <img src="../imoveis/1.jpg" alt="casa em consominio">
+                    </a>
+
+                    <a href="../imoveis/2.jpg" data-pswp-src="../imoveis/2.jpg" data-pswp-caption="Image 1"></a>
+
+                    <a href="../imoveis/3.jpg" data-pswp-src="../imoveis/3.jpg" data-pswp-caption="Image 1"></a>
                 </div>
                 <div class="descricao_imovel">
                     <div class="perfil_imovel">
@@ -223,6 +232,22 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script> 
+
+    <!-- <script type="module">
+        import PhotoSwipeLightbox from '../js/photoswipe/photoswipe-lightbox.esm.js'
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#galeria_imovel',
+            children: 'a',
+            pswpModule: () => import('../js/photoswipe/photoswipe.esm.js')
+        })
+
+        lightbox.init()
+    </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+
+    <script src=""></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
